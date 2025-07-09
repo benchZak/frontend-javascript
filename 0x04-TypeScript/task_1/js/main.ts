@@ -5,7 +5,11 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
-  [key: string]: any; // This allows adding any additional attribute
+  [key: string]: any; // Allows adding any additional attribute
+}
+
+interface Directors extends Teacher {
+  numberOfReports: number;
 }
 
 const teacher3: Teacher = {
@@ -16,4 +20,13 @@ const teacher3: Teacher = {
   contract: false,
 };
 
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+
 console.log(teacher3);
+console.log(director1);
