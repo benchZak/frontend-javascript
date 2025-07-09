@@ -37,8 +37,8 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Development"
-    })
+      title: "Teacher/Director Interface",
+      template: './js/index.html'     })
   ],
   output: { 
     filename: "bundle.js", 
